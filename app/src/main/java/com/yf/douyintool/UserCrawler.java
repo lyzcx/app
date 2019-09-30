@@ -52,9 +52,9 @@ public class UserCrawler {
     public static String getUserPublishUrl(String userId, String iid) {
         String res = null;
         Long now = System.currentTimeMillis();
-        String baseUrl = "https://api.amemv.com/aweme/v1/aweme/post/?";
+        String baseUrl = "https://aweme.snssdk.com/aweme/v1/aweme/post/?";
         String params = "max_cursor=0&user_id=" + userId + "&count=20&retry_type=no_retry&mcc_mnc=46000&iid=" + iid + "&device_id=56647090334&ac=wifi&channel=wandoujia_aweme1&aid=1128&app_name=aweme&version_code=551&version_name=5.5.1&device_platform=android&ssmix=a&device_type=mi+5&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166026615537&openudid=ce712314b4a5205e&manifest_version_code=551&resolution=900*1600&dpi=240&update_version_code=5512&_rticket=" + now + "&ts=" + now / 1000 + "&js_sdk_version=1.13.10";
-        params = "max_cursor=0&user_id=66598046050&count=20&retry_type=no_retry&mcc_mnc=46000&iid=87369521573&device_id=56647090334&ac=wifi&channel=wandoujia_aweme1&aid=1128&app_name=aweme&version_code=551&version_name=5.5.1&device_platform=android&ssmix=a&device_type=mi+5&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166026615537&openudid=ce712314b4a5205e&manifest_version_code=551&resolution=1600*900&dpi=240&update_version_code=5512&_rticket=1569739033836&ts=1569739032&js_sdk_version=1.13.10";
+        //params = "max_cursor=0&user_id=66598046050&count=20&retry_type=no_retry&mcc_mnc=46000&iid=87369521573&device_id=56647090334&ac=wifi&channel=wandoujia_aweme1&aid=1128&app_name=aweme&version_code=551&version_name=5.5.1&device_platform=android&ssmix=a&device_type=mi+5&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166026615537&openudid=ce712314b4a5205e&manifest_version_code=551&resolution=1600*900&dpi=240&update_version_code=5512&_rticket=1569739033836&ts=1569739032&js_sdk_version=1.13.10";
         String[] km = params.split("&");
         String url = baseUrl + params;
         String ascp = UserInfo.getUserInfo(now.intValue(), url, km, iid);
@@ -65,11 +65,10 @@ public class UserCrawler {
             res = url + "&as=" + as + "&cp=" + cp + "&mas=" + mas;
         }
 
-        String[] arr = new String[] {"os_api","22","device_type","mi 5","device_platform","android","ssmix","a","iid","87369521573","manifest_version_code","551","dpi","240","uuid","865166026615537","version_code","551","app_name","aweme","version_name","5.5.1","openudid","ce712314b4a5205e","device_id","56647090334","resolution","900*1600","os_version","5.1.1","language","zh","device_brand","xiaomi","ac","wifi","update_version_code","5512","aid","1128","channel","wandoujia_aweme1","mcc_mnc","46000"};
+        /*String[] arr = new String[] {"os_api","22","device_type","mi 5","device_platform","android","ssmix","a","iid","87369521573","manifest_version_code","551","dpi","240","uuid","865166026615537","version_code","551","app_name","aweme","version_name","5.5.1","openudid","ce712314b4a5205e","device_id","56647090334","resolution","900*1600","os_version","5.1.1","language","zh","device_brand","xiaomi","ac","wifi","update_version_code","5512","aid","1128","channel","wandoujia_aweme1","mcc_mnc","46000"};
         url = "https://aweme-eagle.snssdk.com/aweme/v1/user/?user_id=109780803277&retry_type=no_retry&mcc_mnc=46000&iid=87369521573&device_id=56647090334&ac=wifi&channel=wandoujia_aweme1&aid=1128&app_name=aweme&version_code=551&version_name=5.5.1&device_platform=android&ssmix=a&device_type=mi 5&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166026615537&openudid=ce712314b4a5205e&manifest_version_code=551&resolution=900*1600&dpi=240&update_version_code=5512&_rticket=1569753265461&ts=1569753265&js_sdk_version=1.13.10";
         ascp = UserInfo.getUserInfo(1569753265, url, arr, "56647090334");
-        System.out.println("ascp ------> " + ascp);
-        //a1751889e9d19db4b04899841cd2589f029445e1
+        System.out.println("ascp ------> " + ascp);*/
         return res;
     }
 
