@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="599dp" tools:srcCompat="@tools:sample/backgrounds/scenic[15]"
+            android:id="@+id/imageView3"
+            tools:layout_editor_absoluteY="344dp" tools:layout_editor_absoluteX="0dp">
+    </ImageView>-->
+
+    <Button
+            android:text="user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getUserInfo"
+            android:id="@+id/button2" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="144dp" android:layout_marginStart="144dp"/>
+
+    <Button
+            android:text="user_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getUserPublish"
+            android:id="@+id/button" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+
+
+</android.support.constraint.ConstraintLayout>
