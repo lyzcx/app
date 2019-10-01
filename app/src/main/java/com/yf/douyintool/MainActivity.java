@@ -19,13 +19,15 @@ public class MainActivity extends AppCompatActivity {
     private List<View> viewList;//view数组
 
     public void getUserInfo(View view) { //56647090334
-        String url = UserCrawler.getUserInfoUrl("83670180152", "56647090334");
+        String url = UserCrawler.getUserInfoUrl("102217477530");
+        System.out.println(url);
         UserCrawler.getUserInfo(url);
     }
 
     public void getUserPublish(View view) {
-        String url = UserCrawler.getUserPublishUrl("83670180152", "56647090334");
+        String url = UserCrawler.getUserPublishUrl("102217477530", "56647090334");
         System.out.println(url);
+        //UserCrawler.getUserPublishInfo(url);
     }
 
     @Override
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         UserInfo.setAppId(2);
-        UserInfo.initUser("a3668f0afac72ca3f6c1697d29e0e1bb1fef4ab0285319b95ac39fa42c38d05f");
+        UserInfo.initUser("a3668f0afac72ca3f6c1697d29e0e1brb1fef4ab0285319b95ac39fa42c38d05f");
 
         viewPager = findViewById(R.id.viewpager);
         LayoutInflater inflater=getLayoutInflater();
